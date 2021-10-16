@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Demo</title>
+  </head>
+<body>
+
+    <img src="mountain3.jpg" id="myImg" width="400" height="400">
+    <input type="button" onclick="changeImg()" value="Change" />
+    <script>
+        function changeImg() {
+            var image = document.getElementById('myImg');
+            if (image.src.match("mountain3.jpg")) {
+                image.src = "mountain2.jpg";
+            }
+            else {
+                image.src = "mountain3.jpg";
+            }
+        }
+    </script>
+
+</body>
+</html>

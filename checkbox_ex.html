@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Select subjects</title>
+</head>
+
+<body>
+	<label for="subject-1"> <input type="checkbox" name="subject" value="Javascript" id="Javascript" />Javascript</label>
+	<label for="subject-2"><input type="checkbox" name="subject" value="Fullstack" id="Fullstack" /> Fullstack</label>
+	<label for="subject-3"><input type="checkbox" name="subject" value="Machine Learning" id="machinelearning" />Machine
+		Learning</label><br><br>
+	<button id="btn"> Select Courses </Select></button>
+	<script>
+		function getSelectedCheckboxValues(name) {
+			const checkboxes = document.querySelectorAll(`input[name="${name}"]:checked`);
+			let values = [];
+			checkboxes.forEach((checkbox) => {
+				values.push(checkbox.value);
+			});
+			return values;
+		}
+
+		const btn = document.querySelector('#btn');
+		btn.addEventListener('click', (event) => {
+			alert(getSelectedCheckboxValues('subject'));
+		});
+	</script>
+</body>
+
+</html>
